@@ -3,7 +3,6 @@
 | № | Работа | Отчёт |
 |---|---|---|
 | 01 | [ЛР 1. Процесс изнутри](01-process-inside/) | [Markdown](01-process-inside/report.md) · [PDF](01-process-inside/report.pdf) · [Word](01-process-inside/report.docx) |
-| 03 | [ЛР 3. Библиотеки программы](03-libraries/) | [Markdown](03-libraries/report.md) · [PDF](03-libraries/report.pdf) · [Word](03-libraries/report.docx) |
 | 04 | [ЛР 4. Дерево процессов](04-process-tree/) | [Markdown](04-process-tree/report.md) · [PDF](04-process-tree/report.pdf) · [Word](04-process-tree/report.docx) |
 | 05 | [ЛР 5. Рождение процесса](05-process-birth/) | [Markdown](05-process-birth/report.md) · [PDF](05-process-birth/report.pdf) · [Word](05-process-birth/report.docx) |
 | 06 | [ЛР 6. Кто загружает процессор](06-cpu-load/) | [Markdown](06-cpu-load/report.md) · [PDF](06-cpu-load/report.pdf) · [Word](06-cpu-load/report.docx) |
