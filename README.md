@@ -24,15 +24,22 @@
 
 ```text
 system-dev/
-└── labs/          одна папка на лабораторную работу
+├── labs/          лабораторные работы: отчёты, исходники и скриншоты
+├── checks/        автоматические проверки преподавателя
+├── lectures/      конспекты глав
+├── materials/     файлы с занятий
+└── docs/          правила сдачи и обновления
 ```
 
 ## Проверки
 
-Сборка, команды и результаты опытов описаны в отчётах отдельных работ.
+Сборка, команды и результаты опытов описаны в отчётах отдельных работ. [Проверки преподавателя](checks/README.md) доступны в папке `checks`.
 
 ## Материалы курса
 
 - [Справочник по системному программированию](https://maximbytecamp.github.io/sysprog_makarov/)
-- [Конспекты глав](https://github.com/MaximBytecamp/sysprog-start-template/tree/main/lectures)
-- [Как сдавать работы](https://github.com/MaximBytecamp/sysprog-start-template/blob/main/docs/SUBMIT.md)
+- [Конспекты пройденных глав](lectures/README.md)
+- [Как сдавать работы](docs/SUBMIT.md) и [как приходят новые материалы](docs/UPDATES.md)
+
+- [Пошаговая инструкция по работе с репозиторием](https://algorthimization-course-vvodnoe.vercel.app/dup02-vvedenie-v-python/repozitoriy/index.html) — инструкция курса Python; здесь репозиторий называется system-dev.
+
