@@ -137,30 +137,7 @@ def check_lab02():
     return [("ЛР 2", "debug.c", "ошибка", f"нет строки «{LAB02_LINE}» в выводе")], False
 
 
-LAB03_LINE = "sqrt(2) = 1.414214"
-
-
-def check_lab03():
-    """ЛР 3: libs.c собирается (в Linux — с -lm) и печатает корень из 2."""
-    src = ROOT / "labs" / "03-libraries" / "libs.c"
-    if not src.exists():
-        return [("ЛР 3", "libs.c", "не сдано", "")], True
-    with tempfile.TemporaryDirectory() as d:
-        exe = Path(d) / ("libs.exe" if SYSTEM == "win" else "libs")
-        if SYSTEM == "win":
-            r = run(["cl", "/nologo", str(src), f"/Fe:{exe}", f"/Fo:{d}\\"])
-        else:
-            cc = shutil.which("cc") or shutil.which("gcc") or shutil.which("clang")
-            r = run([cc, "-o", str(exe), str(src), "-lm"])
-        if r.returncode != 0:
-            return [("ЛР 3", "libs.c", "ошибка", "не собирается: " + (r.stdout + r.stderr).strip().splitlines()[-1][:150])], False
-        out = run([str(exe)]).stdout
-    if LAB03_LINE in out:
-        return [("ЛР 3", "libs.c", "пройдено", LAB03_LINE)], True
-    return [("ЛР 3", "libs.c", "ошибка", f"нет строки «{LAB03_LINE}» в выводе")], False
-
-
-LABS = ("01-process-inside", "02-debugger", "03-libraries", "04-process-tree", "05-process-birth", "06-cpu-load", "07-python-threads", "08-memory-map", "09-crash")
+LABS = ("01-process-inside", "02-debugger", "04-process-tree", "05-process-birth", "06-cpu-load", "07-python-threads", "08-memory-map", "09-crash")
 PLACEHOLDER = b"sysprog-placeholder"  # метка в заглушках шаблона, у снимка её нет
 IMAGE_START = (b"\x89PNG", b"\xff\xd8\xff")
 
@@ -426,12 +403,11 @@ def main():
     sys.stdout.reconfigure(encoding="utf-8")
     rows, ok = check_lab01()
     rows2, ok2 = check_lab02()
-    rows3, ok3 = check_lab03()
     rows4, ok4 = check_module1_agent()
     rows5, ok5 = check_module1_ai()
     rows6, ok6 = check_screenshots()
-    rows += rows2 + rows3 + rows6 + rows4 + rows5
-    ok = ok and ok2 and ok3 and ok4 and ok5 and ok6
+    rows += rows2 + rows6 + rows4 + rows5
+    ok = ok and ok2 and ok4 and ok5 and ok6
     agent = {1: check_agent1()}
     if OPENED >= 2:
         agent[2] = check_agent2()
