@@ -5,8 +5,8 @@
 | | |
 |---|---|
 | Автор | Литвиненко Артур |
-| Группа | РПО-24/9/1-3 |
-| Курс | 2026/2027 |
+| Группа | 9/3-РПО-24/1 |
+| Курс | 3 |
 | Система | Windows 11 x64 |
 | Языки | C, Python |
 | Редактор | VS Code |
@@ -42,4 +42,3 @@ system-dev/
 - [Как сдавать работы](docs/SUBMIT.md) и [как приходят новые материалы](docs/UPDATES.md)
 
 - [Пошаговая инструкция по работе с репозиторием](https://algorthimization-course-vvodnoe.vercel.app/dup02-vvedenie-v-python/repozitoriy/index.html) — инструкция курса Python; здесь репозиторий называется system-dev.
-
